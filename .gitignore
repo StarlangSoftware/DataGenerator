@@ -53,3 +53,10 @@ nb-configuration.xml
 release.properties
 pom.xml.releaseBackup
 pom.xml.tag
+out/artifacts/DataGenerator_jar/DataGenerator.jar
+out/production/DataGenerator/libs/AnnotatedSentence.jar
+out/production/DataGenerator/libs/AnnotatedTree.jar
+out/production/DataGenerator/libs/MorphologicalAnalysis.jar
+out/production/DataGenerator/libs/NamedEntityRecognition.jar
+out/production/DataGenerator/libs/ParseTree.jar
+out/production/DataGenerator/libs/WordNet.jar
