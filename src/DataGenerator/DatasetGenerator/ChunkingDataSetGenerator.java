@@ -4,7 +4,6 @@ import AnnotatedSentence.*;
 import AnnotatedTree.ChunkType;
 import Classification.Instance.Instance;
 import DataGenerator.InstanceGenerator.ShallowParseInstanceGenerator;
-import DataGenerator.InstanceGenerator.InstanceNotGenerated;
 import AnnotatedTree.ParseTreeDrawable;
 
 import java.util.ArrayList;
@@ -25,18 +24,7 @@ public class ChunkingDataSetGenerator extends DataSetGenerator{
             return instanceList;
         parseTree.extractVerbal();
         parseTree.setShallowParseLayer(chunkType);
-        AnnotatedSentence annotatedSentence = parseTree.generateAnnotatedSentence();
-        for (int i = 0; i < annotatedSentence.wordCount(); i++){
-            try {
-                Instance generatedInstance = instanceGenerator.generateInstanceFromSentence(annotatedSentence, i);
-                if (generatedInstance != null){
-                    instanceList.add(generatedInstance);
-                }
-            } catch (InstanceNotGenerated e) {
-                System.out.println(e.toString());
-            }
-        }
-        return instanceList;
+        return super.generateInstanceListFromTree(parseTree);
     }
 
 }

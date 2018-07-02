@@ -22,7 +22,7 @@ public class DataSetGenerator {
     }
 
     protected ArrayList<Instance> generateInstanceListFromTree(ParseTreeDrawable parseTree) {
-        ArrayList<Instance> instanceList = new ArrayList<Instance>();
+        ArrayList<Instance> instanceList = new ArrayList<>();
         AnnotatedSentence annotatedSentence = parseTree.generateAnnotatedSentence();
         for (int i = 0; i < annotatedSentence.wordCount(); i++){
             try {
