@@ -32,6 +32,6 @@ public class TestDataSetGenerator {
     }
 
     public static void main(String[] args){
-        generateShallowParse();
+        generateSemantic();
     }
 }
