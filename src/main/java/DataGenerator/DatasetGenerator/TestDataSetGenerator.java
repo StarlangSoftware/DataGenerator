@@ -11,21 +11,21 @@ import WordNet.WordNet;
 public class TestDataSetGenerator {
 
     private static void generateNer(){
-        InstanceGenerator instanceGenerator = new FeaturedNerInstanceGenerator(3);
+        InstanceGenerator instanceGenerator = new FeaturedNerInstanceGenerator(2);
         AnnotatedDataSetGenerator annotatedDataSetGenerator = new AnnotatedDataSetGenerator("../../Penn-Treebank/Turkish-Phrase/", ".", instanceGenerator);
         DataSet dataSet = annotatedDataSetGenerator.generate();
         dataSet.writeToFile("ner.txt");
     }
 
     private static void generateShallowParse(){
-        InstanceGenerator instanceGenerator = new FeaturedShallowParseInstanceGenerator(3);
+        InstanceGenerator instanceGenerator = new FeaturedShallowParseInstanceGenerator(2);
         AnnotatedDataSetGenerator annotatedDataSetGenerator = new AnnotatedDataSetGenerator("../../Penn-Treebank/Turkish-Phrase/", ".", instanceGenerator);
         DataSet dataSet = annotatedDataSetGenerator.generate();
         dataSet.writeToFile("shallowparse.txt");
     }
 
     private static void generateSemantic(){
-        InstanceGenerator instanceGenerator = new FeaturedSemanticInstanceGenerator(new FsmMorphologicalAnalyzer(), new WordNet(), 3);
+        InstanceGenerator instanceGenerator = new FeaturedSemanticInstanceGenerator(new FsmMorphologicalAnalyzer(), new WordNet(), 2);
         AnnotatedDataSetGenerator annotatedDataSetGenerator = new AnnotatedDataSetGenerator("../../Penn-Treebank/Turkish-Phrase/", ".", instanceGenerator);
         DataSet dataSet = annotatedDataSetGenerator.generate();
         dataSet.writeToFile("semantic.txt");
