@@ -6,6 +6,6 @@ import MorphologicalAnalysis.MorphologicalTag;
 public class LastIGContainsTagInstrumentalAttribute extends LastIGContainsTagAttribute {
 
 	public LastIGContainsTagInstrumentalAttribute(MorphologicalParse parse){
-		super(parse, MorphologicalTag.GENITIVE);
+		super(parse, MorphologicalTag.INSTRUMENTAL);
 	}
 }
