@@ -25,7 +25,16 @@ The standard approach for NER is a word-by-word classification, where the classi
 7. RootPos Attribute: This attribute is a discrete attribute for a given word. It returns the part of speech of the root word.
 8. Surface Form: This is a discrete valued feature and stores the word's itself as its value. It is a strong feature because the meaning of a word's root can be modified through affixation. In a word's surface form, the word is considered as a whole with all the affixes attached, and, when it is used as a feature, it matches with the corresponding meaning. 
 9. ShallowTag: This is a discrete valued feature, which finds the Shallow Parse tag of the word.
-10. Is Percentage: This is a discrete valued feature. It checks each character in the string. If the character equals to `%', it returns true, otherwise false.
+10. IsPercentage: This is a discrete valued feature. It checks each character in the string. If the character equals to `%', it returns true, otherwise false.
+11. IsDateAttribute: This is a binary attribute that checks whether a word is written in date format. If the word is in date format, it returns true, otherwise it returns false.
+12. IsFractionAttribute: This is a binary attribute that checks whether a word is a fractional number. If the word is a fractional number, it returns true, otherwise it returns false.
+13. IsHonorificAttribute: This is a binary attribute. It checks each word in a sentence. If the word equals to one of the titles 'bay', 'bayan', 'sayın', 'dr.', 'prof.' or 'doç.', it returns true, otherwise it returns false.
+14. IsMoneyAttribute: This is a binary attribute. It checks whether a word in a sentence denotes a currency. If the word is 'doları', 'lirası' or 'avro', the attribute returns true, otherwise it returns false.
+15. IsNumAttribute: This attribute checks whether the word has num (number) tag.
+16. IsOrganizationAttribute: This is a binary attribute. It checks a given word and if it equals to 'corp', 'inc.', or 'co.', it returns true, otherwise it returns false.
+17. IsPropAttribute: This attribute checks whether the word has prop (proper name) tag.
+18. IsRealAttribute: This is a binary attribute that checks whether a word is a real number or not. If the word is a real number, it returns true, otherwise it returns false.
+19. IsTimeAttribute: This is a binary attribute that checks whether a word is written in time format. If the word is in time format, it returns true, otherwise it returns false.
 
 For Developers
 ============
