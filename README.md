@@ -23,7 +23,7 @@ In shallow parsing, one tries to find the strings of text that belong to a chunk
 ## Attributes
 
 1. CaseAttribute:  This is a discrete attribute for a given word. If the last inflectional group of the word contains case information, the attribute will have that case value. Otherwise the attribute will have the value null.
-2. Is Capital Letter: This a binary valued feature. Its value returns true}if the word starts with a capital letter, and  false otherwise. Words starting with a capital letter are proper nouns unless the word is not the first word in the sentence. Being proper noun is important for meaning because proper nouns do not have specific meanings.
+2. IsCapitalLetter: This a binary valued feature. Its value returns true}if the word starts with a capital letter, and  false otherwise. Words starting with a capital letter are proper nouns unless the word is not the first word in the sentence. Being proper noun is important for meaning because proper nouns do not have specific meanings. Being a proper noun can be important for Shallow Parse labeling because, for instance, if it is a name of a person, it is more probable for the word to be the subject or the object, rather than the adverbial clause or the predicate, of the sentence it occurs in. Yet such clues are not always reliable.
 3. LastIGContainsPossessiveAttribute: This is a binary attribute for a given word. If the last inflectional group of the word contains possessive information, the attribute will be true, otherwise it will be false.
 4. Main POS: This is a discrete valued feature. The value of the feature consists of the main part-of-speech (POS) tag of the word.
 5. NerTag: This is a discrete valued feature, which finds the NER (Named Entity Recognition) tag of the word. This is a strong feature especially for detecting subjects and objects in the sentence. For Instance, if the word has a 'PERSON' NER tag, it is generally the subject or the object of the sentence.
@@ -41,6 +41,15 @@ In shallow parsing, one tries to find the strings of text that belong to a chunk
 17. IsPropAttribute: This attribute checks whether the word has prop (proper name) tag.
 18. IsRealAttribute: This is a binary attribute that checks whether a word is a real number or not. If the word is a real number, it returns true, otherwise it returns false.
 19. IsTimeAttribute: This is a binary attribute that checks whether a word is written in time format. If the word is in time format, it returns true, otherwise it returns false.
+20. IsAdjective Attribute: This is a binary valued feature, that shows whether a word used as an adjective or not.
+21. IsAuxillaryVerb Attribute: This is a binary valued feature, that checks whether the word is an auxiliary verb. This is another strong feature because it may be useful in identifying the word as (part of) a predicate ("yüklem").
+22. IsIndirectObjectMoneyAttribute: This is a binary valued feature for a given word. If the word equals to "artarak" or "azalarak" and the named entity type of the word is "NONE", it returns true, otherwise false.
+23. LastMorphTagAttribute: This is a discrete attribute which returns the morphological tag of the last inflectional group.
+24. LastSyllable Attribute: This is a discrete valued feature, that finds the last 3 characters of the word, and it can be helpful in detecting suffixes.
+25. LastIGContainsTagAblative Attribute: This is a binary valued feature, that checks whether the word is in ablative case or not.
+26. LastIGContainsTagAccusative Attribute: This is a binary valued feature, that checks whether the word is in accusative case or not.
+27. LastIGContainsTagGenitive Attribute: This is a binary valued feature, that checks whether the word is in genitive case or not.
+28. LastIGContainsTagInstrumental Attribute: This is a binary valued feature, that checks whether the word is in instrumental case or not.
 
 For Developers
 ============
