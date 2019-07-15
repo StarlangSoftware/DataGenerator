@@ -9,6 +9,15 @@ In the literature, there are actually two variants of the generic WSD task. In t
 
 In all-words WSD, a classifier is trained to label the words in the text with their set of potential word senses. After giving the sense labels to the words in our training data, the next step is to select a group of features to discriminate different senses for each input word.
 
+The following Table shows an example for the word 'yüz', which can refer to the number '100', to the verb 'swim' or to the noun 'face'.
+
+|Sense|Definition|
+|---|---|
+|yüz<sup>1</sup> (hundred)|The number coming after ninety nine|
+|yüz<sup>2</sup> (swim)|move or float in water|
+|yüz<sup>3</sup> (face)|face, visage, countenance|
+
+
 ### Named Entity Recognition Task
 In named entity recognition, one tries to find the strings within a text that correspond to proper names (excluding TIME and MONEY) and classify the type of entity denoted by these strings. The problem is difficult partly due to the ambiguity in sentence segmentation; one needs to extract which words belong to a named entity, and which not. Another difficulty occurs when some word may be used as a name of either a person, an organization or a location. For example, Deniz may be used as the name of a person, or - within a compound - it can refer to a location Marmara Denizi 'Marmara Sea', or an organization Deniz Taşımacılık 'Deniz Transportation'.
 
@@ -17,6 +26,16 @@ The standard approach for NER is a word-by-word classification, where the classi
 [<sub>ORG</sub> Türk Hava Yolları] bu [<sub>TIME</sub> Pazartesi'den] itibaren [<sub>LOC</sub> İstanbul] [<sub>LOC</sub> Ankara] hattı için indirimli satışlarını [<sub>MONEY</sub> 90 TL'den] başlatacağını açıkladı.
 
 [<sub>ORG</sub> Turkish Airlines] announced that from this [<sub>TIME</sub> Monday] on it will start its discounted fares of [<sub>MONEY</sub> 90TL] for [<sub>LOC</sub> İstanbul] [<sub>LOC</sub> Ankara] route.
+
+See the Table below for typical generic named entity types.
+
+|Tag|Sample Categories|
+|---|---|
+|PERSON|people, characters|
+|ORGANIZATION|companies, teams|
+|LOCATION|regions, mountains, seas|
+|TIME|time expressions|
+|MONEY|monetarial expressions|
 
 ### Shallow Parse Task
 
@@ -27,6 +46,16 @@ In shallow parsing, one tries to find the strings of text that belong to a chunk
 [<sub>OZNE</sub> Türk Hava Yolları] [<sub>ZARF TÜMLECİ</sub> Salı günü] [<sub>NESNE</sub> yeni indirimli fiyatlarını] [<sub>YÜKLEM</sub> açıkladı]
 
 [<sub>SUBJECT</sub> Turkish Airlines] [<sub>PREDICATE</sub> announced] [<sub>OBJECT</sub> new discounted fares] [<sub>ADVERBIAL CLAUSE</sub> on Tuesday]  
+
+The Table below shows typical shallow parse tags and the questions asked to the predicate to identify the chunks for those tags.
+ 
+|Tag|Question|
+|---|---|
+|ÖZNE|Who, What|
+|ZARF TÜMLECİ|When, How, Why|
+|DOLAYLI TÜMLEÇ|Where, To/From whom|
+|NESNE|What, Whom|
+|YÜKLEM|Predicate|
 
 ### Semantic Role Labeling Task
 
@@ -39,6 +68,23 @@ Each verb has a frame file, which contains arguments applicable to that verb. Fr
 [<sub>ARG0</sub> Türk Hava Yolları] [<sub>ARG1</sub> indirimli satışlarını] [<sub>ARGM-TMP</sub> bu Pazartesi] [<sub>PREDICATE</sub> açıkladı].
 
 [<sub>ARG0</sub> Turkish Airlines] [<sub>PREDICATE</sub> announced] [<sub>ARG1</sub> its discounted fares] [<sub>ARGM-TMP</sub> this Monday].
+
+The following Table shows typical semantic role types. Only Arg0 and Arg1 indicate the same thematic roles across different verbs: Arg0 stands for the Agent or Causer and Arg1 is the Patient or Theme. The rest of the thematic roles can vary across different verbs. They can stand for Instrument, Start point, End point, Beneficiary, or Attribute. Moreover, PropBank uses ArgM’s as modifier labels indicating time, location, temporal, goal, cause etc., where the role is not specific to a single verb group; it generalizes over the entire corpus instead.
+
+|Tag|Meaning|
+|---|---|
+|Arg0|Agent or Causer|
+|ArgM-EXT|Extent|
+|Arg1|Patient or Theme|
+|ArgM-LOC|Locatives|
+|Arg2|Instrument, start point, end point, beneficiary, or attribute|
+|ArgM-CAU|Cause|
+|ArgM-MNR|Manner|
+|ArgM-DIS|Discourse|
+|ArgM-ADV|Adverbials|
+|ArgM-DIR|Directionals|
+|ArgM-PNC|Purpose|
+|ArgM-TMP|Temporals|
 
 ## Attributes
 
