@@ -9,10 +9,20 @@ public abstract class DisambiguationInstanceGenerator extends InstanceGenerator{
     protected abstract void addAttributesForPreviousWords(Instance current, Sentence sentence, int wordIndex);
     protected abstract void addAttributesForEmptyWords(Instance current, String emptyWord);
 
-    public Instance generateInstanceFromSentence(Sentence sentence, int wordIndex){
+    /**
+     * Generates a single classification instance of the morphological disambiguation problem for the given word of the
+     * given sentence. If the word does not have a morphological parse, the method throws InstanceNotGenerated.
+     * @param sentence Input sentence.
+     * @param wordIndex The index of the word in the sentence.
+     * @return Classification instance.
+     */
+    public Instance generateInstanceFromSentence(Sentence sentence, int wordIndex) throws InstanceNotGenerated{
         Instance current;
         AnnotatedWord word;
         word = (AnnotatedWord) sentence.getWord(wordIndex);
+        if (word.getParse() == null){
+            throw new InstanceNotGenerated(word.getName());
+        }
         current = new Instance(word.getParse().getTransitionList());
         for (int i = 1; i <= windowSize; i++){
             if (wordIndex - windowSize >= 0){

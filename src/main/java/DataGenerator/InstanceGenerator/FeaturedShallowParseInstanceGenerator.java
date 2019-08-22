@@ -9,10 +9,22 @@ import MorphologicalAnalysis.MorphologicalParse;
 
 public class FeaturedShallowParseInstanceGenerator extends ShallowParseInstanceGenerator {
 
+    /**
+     * Constructor method. Gets input window size and sets the corresponding variable.
+     * @param windowSize Number of previous (next) words to be considered in adding attributes.
+     */
     public FeaturedShallowParseInstanceGenerator(int windowSize) {
         this.windowSize = windowSize;
     }
 
+    /**
+     * Abstract function for adding attributes to the shallow parsing problem. Depending on your design
+     * you can add as many attributes as possible. The number of attributes in this function should be equal to the
+     * number of attributes in the function addAttributesForEmptyWords.
+     * @param current Current classification instance
+     * @param sentence Input sentence.
+     * @param wordIndex The index of the word in the sentence.
+     */
     protected void addAttributesForWords(Instance current, Sentence sentence, int wordIndex) throws InstanceNotGenerated {
         MorphologicalParse parse;
         AnnotatedWord word;
@@ -49,6 +61,13 @@ public class FeaturedShallowParseInstanceGenerator extends ShallowParseInstanceG
         current.addAttribute(new CaseAttribute(parse));
     }
 
+    /**
+     * Abstract function for adding attributes for empty words to the shallow parsing problem. The number of
+     * attributes in this function should be equal to the number of attributes in the function
+     * addAttributesForPreviousWords.
+     * @param current Current classification instance
+     * @param emptyWord String form to place for empty words.
+     */
     protected void addAttributesForEmptyWords(Instance current, String emptyWord) {
         current.addAttribute(new BinaryAttribute(false));
         current.addAttribute(new BinaryAttribute(false));
