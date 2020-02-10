@@ -24,9 +24,9 @@ public abstract class RootWordInstanceGenerator extends InstanceGenerator{
             throw new InstanceNotGenerated(word.getName());
         }
         current = new Instance(word.getParse().getWord().getName());
-        for (int i = 1; i <= windowSize; i++){
-            if (wordIndex - windowSize >= 0){
-                addAttributesForPreviousWords(current, sentence, wordIndex - windowSize);
+        for (int i = 0; i < windowSize; i++){
+            if (wordIndex - windowSize + i >= 0){
+                addAttributesForPreviousWords(current, sentence, wordIndex - windowSize + i);
             } else {
                 addAttributesForEmptyWords(current, "<s>");
             }

@@ -49,7 +49,7 @@ public class FeaturedShallowParseInstanceGenerator extends ShallowParseInstanceG
         current.addAttribute(new IsTimeAttribute(word.getName()));
 
         current.addAttribute(new LastIGContainsPossessiveAttribute(parse));
-        current.addAttribute(new LastIGContainsTagAblaviateAttribute(parse));
+        current.addAttribute(new LastIGContainsTagAblativeAttribute(parse));
         current.addAttribute(new LastIGContainsTagAccusativeAttribute(parse));
         current.addAttribute(new LastIGContainsTagGenitiveAttribute(parse));
         current.addAttribute(new LastIGContainsTagInstrumentalAttribute(parse));
