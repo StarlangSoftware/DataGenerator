@@ -11,17 +11,11 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-    <repositories>
-        <repository>
-            <id>NlpToolkit</id>
-            <url>http://haydut.isikun.edu.tr:8081/artifactory/NlpToolkit</url>
-        </repository>
-    </repositories>
     <dependencies>
         <dependency>
             <groupId>NlpToolkit</groupId>
             <artifactId>AnnotatedTree</artifactId>
-            <version>1.0.7</version>
+            <version>1.0.8</version>
         </dependency>
         <dependency>
             <groupId>NlpToolkit</groupId>
@@ -36,7 +30,7 @@
         <dependency>
             <groupId>NlpToolkit</groupId>
             <artifactId>AnnotatedSentence</artifactId>
-            <version>1.0.7</version>
+            <version>1.0.8</version>
         </dependency>
         <dependency>
             <groupId>NlpToolkit</groupId>
@@ -56,12 +50,12 @@
         <dependency>
             <groupId>NlpToolkit</groupId>
             <artifactId>Math</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>NlpToolkit</groupId>
             <artifactId>PropBank</artifactId>
-            <version>1.0.5</version>
+            <version>1.0.6</version>
         </dependency>
         <dependency>
             <groupId>NlpToolkit</groupId>
@@ -71,19 +65,19 @@
         <dependency>
             <groupId>NlpToolkit</groupId>
             <artifactId>WordNet</artifactId>
-            <version>1.0.24</version>
+            <version>1.0.25</version>
         </dependency>
         <dependency>
             <groupId>NlpToolkit</groupId>
             <artifactId>MorphologicalDisambiguation</artifactId>
-            <version>1.0.5</version>
+            <version>1.0.9</version>
         </dependency>
     </dependencies>
 
     <distributionManagement>
         <repository>
-            <id>NlpToolkit</id>
-            <url>http://haydut.isikun.edu.tr:8081/artifactory/NlpToolkit</url>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/starlangsoftware/datagenerator</url>
         </repository>
     </distributionManagement>
 
