@@ -250,11 +250,11 @@ Use below line to generate jar file:
 
 ## Maven Usage
 
-	<dependency>
-  	<groupId>NlpToolkit</groupId>
-  	<artifactId>DataGenerator</artifactId>
-  	<version>1.0.4</version>
-	</dependency>
+        <dependency>
+            <groupId>io.github.starlangsoftware</groupId>
+            <artifactId>DataGenerator</artifactId>
+            <version>1.0.4</version>
+        </dependency>
 
 
 ------------------------------------------------
