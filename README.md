@@ -1,5 +1,9 @@
 # DataGenerator
 
+For Developers
+============
+You can also see [Python](https://github.com/starlangsoftware/DataGenerator-Py), [C++](https://github.com/starlangsoftware/DataGenerator-CPP),  or [C#](https://github.com/starlangsoftware/DataGenerator-CS) repository.
+
 ## Tasks
 
 ### Word Sense Disambiguation Task
