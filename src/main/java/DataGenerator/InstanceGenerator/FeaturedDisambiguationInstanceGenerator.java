@@ -20,7 +20,7 @@ public class FeaturedDisambiguationInstanceGenerator extends DisambiguationInsta
     }
 
     /**
-     * Anstract function for adding attributes to the morphological disambiguation problem. Depending on your design
+     * Abstract function for adding attributes to the morphological disambiguation problem. Depending on your design
      * you can add as many attributes as possible. The number of attributes in this function should be equal to the
      * number of attributes in the function addAttributesForEmptyWords.
      * @param current Current classification instance

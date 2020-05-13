@@ -1,13 +1,15 @@
 package DataGenerator.CorpusGenerator;
 
+import AnnotatedSentence.AnnotatedSentence;
 import AnnotatedSentence.ViewLayerType;
-import Corpus.Sentence;
+import AnnotatedSentence.AnnotatedWord;
+import MorphologicalDisambiguation.DisambiguatedWord;
 import MorphologicalDisambiguation.DisambiguationCorpus;
 import AnnotatedTree.ParseTreeDrawable;
 import AnnotatedTree.TreeBankDrawable;
 import java.io.File;
 
-public class DisambiguationCorpusGenerator {
+public class TreeDisambiguationCorpusGenerator {
     private TreeBankDrawable treeBank;
 
     /**
@@ -18,7 +20,7 @@ public class DisambiguationCorpusGenerator {
      * @param directory Directory where the treebank files reside.
      * @param pattern Pattern of the tree files to be included in the treebank. Use "." for all files.
      */
-    public DisambiguationCorpusGenerator(String directory, String pattern){
+    public TreeDisambiguationCorpusGenerator(String directory, String pattern){
         treeBank = new TreeBankDrawable(new File(directory), pattern);
     }
 
@@ -30,13 +32,17 @@ public class DisambiguationCorpusGenerator {
      */
     public DisambiguationCorpus generate(){
         ParseTreeDrawable parseTree;
-        Sentence sentence;
+        AnnotatedSentence sentence, disambiguationSentence;
         DisambiguationCorpus corpus = new DisambiguationCorpus();
         for (int i = 0; i < treeBank.size(); i++){
             parseTree = treeBank.get(i);
             if (parseTree.layerAll(ViewLayerType.INFLECTIONAL_GROUP)){
                 sentence = parseTree.generateAnnotatedSentence();
-                corpus.addSentence(sentence);
+                disambiguationSentence = new AnnotatedSentence();
+                for (int j = 0; j < sentence.wordCount(); j++){
+                    disambiguationSentence.addWord(new DisambiguatedWord(sentence.getWord(j).getName(), ((AnnotatedWord)sentence.getWord(j)).getParse()));
+                }
+                corpus.addSentence(disambiguationSentence);
             }
         }
         return corpus;

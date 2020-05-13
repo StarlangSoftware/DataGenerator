@@ -5,11 +5,18 @@ import NamedEntityRecognition.NERCorpus;
 
 public class TestCorpusGenerator {
 
-    private static void disambiguationCorpusGenerate(){
-        DisambiguationCorpusGenerator disambiguationCorpusGenerator;
-        disambiguationCorpusGenerator = new DisambiguationCorpusGenerator("../Penn-Treebank/Turkish", ".");
-        DisambiguationCorpus corpus = disambiguationCorpusGenerator.generate();
-        corpus.writeToFile("corpus.txt");
+    private static void treeDisambiguationCorpusGenerate(){
+        TreeDisambiguationCorpusGenerator treeDisambiguationCorpusGenerator;
+        treeDisambiguationCorpusGenerator = new TreeDisambiguationCorpusGenerator("../../Penn-Treebank/Turkish", ".");
+        DisambiguationCorpus corpus = treeDisambiguationCorpusGenerator.generate();
+        corpus.writeToFile("corpus1.txt");
+    }
+
+    private static void sentenceDisambiguationCorpusGenerate(){
+        SentenceDisambiguationCorpusGenerator sentenceDisambiguationCorpusGenerator;
+        sentenceDisambiguationCorpusGenerator = new SentenceDisambiguationCorpusGenerator("../../Penn-Treebank/Turkish-Phrase", ".");
+        DisambiguationCorpus corpus = sentenceDisambiguationCorpusGenerator.generate();
+        corpus.writeToFile("corpus2.txt");
     }
 
     private static void nerCorpusGenerate(){
@@ -20,6 +27,6 @@ public class TestCorpusGenerator {
     }
 
     public static void main(String[] args){
-        disambiguationCorpusGenerate();
+        sentenceDisambiguationCorpusGenerate();
     }
 }
