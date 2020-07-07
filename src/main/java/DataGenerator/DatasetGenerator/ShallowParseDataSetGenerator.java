@@ -8,7 +8,7 @@ import AnnotatedTree.ParseTreeDrawable;
 
 import java.util.ArrayList;
 
-public class ChunkingDataSetGenerator extends DataSetGenerator{
+public class ShallowParseDataSetGenerator extends DataSetGenerator{
     private ChunkType chunkType;
 
     /**
@@ -20,7 +20,7 @@ public class ChunkingDataSetGenerator extends DataSetGenerator{
      * @param chunkType THe chunkType for which the chunking dataset is generated.
      * @param shallowParseInstanceGenerator The instance generator used to generate the dataset.
      */
-    public ChunkingDataSetGenerator(String directory, String pattern, ChunkType chunkType, ShallowParseInstanceGenerator shallowParseInstanceGenerator) {
+    public ShallowParseDataSetGenerator(String directory, String pattern, ChunkType chunkType, ShallowParseInstanceGenerator shallowParseInstanceGenerator) {
         super(directory, pattern, true, shallowParseInstanceGenerator);
         this.chunkType = chunkType;
     }
