@@ -15,8 +15,8 @@ public class SemanticDataSetGeneratorTest {
     public void testGenerate() {
         FsmMorphologicalAnalyzer fsmMorphologicalAnalyzer = new FsmMorphologicalAnalyzer();
         WordNet turkish = new WordNet();
-        SemanticDataSetGenerator nerDataSetGenerator = new SemanticDataSetGenerator("trees/", ".dev", new FeaturedSemanticInstanceGenerator(fsmMorphologicalAnalyzer, turkish, 1));
-        DataSet dataSet = nerDataSetGenerator.generate();
+        SemanticDataSetGenerator semanticDataSetGenerator = new SemanticDataSetGenerator("trees/", ".dev", new FeaturedSemanticInstanceGenerator(fsmMorphologicalAnalyzer, turkish, 1));
+        DataSet dataSet = semanticDataSetGenerator.generate();
         assertEquals(88, dataSet.sampleSize());
         assertEquals(64, dataSet.classCount());
         assertEquals(66, dataSet.attributeCount());

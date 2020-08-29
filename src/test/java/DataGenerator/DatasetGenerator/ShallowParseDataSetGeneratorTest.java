@@ -11,13 +11,13 @@ public class ShallowParseDataSetGeneratorTest {
 
     @Test
     public void testGenerate() {
-        ShallowParseDataSetGenerator nerDataSetGenerator = new ShallowParseDataSetGenerator("trees/", ".dev", ChunkType.NORMAL, new FeaturedShallowParseInstanceGenerator(1));
-        DataSet dataSet = nerDataSetGenerator.generate();
+        ShallowParseDataSetGenerator shallowParseDataSetGenerator = new ShallowParseDataSetGenerator("trees/", ".dev", ChunkType.NORMAL, new FeaturedShallowParseInstanceGenerator(1));
+        DataSet dataSet = shallowParseDataSetGenerator.generate();
         assertEquals(85, dataSet.sampleSize());
         assertEquals(11, dataSet.classCount());
         assertEquals(66, dataSet.attributeCount());
-        nerDataSetGenerator = new ShallowParseDataSetGenerator("trees/", ".dev", ChunkType.EXISTS, new FeaturedShallowParseInstanceGenerator(1));
-        dataSet = nerDataSetGenerator.generate();
+        shallowParseDataSetGenerator = new ShallowParseDataSetGenerator("trees/", ".dev", ChunkType.EXISTS, new FeaturedShallowParseInstanceGenerator(1));
+        dataSet = shallowParseDataSetGenerator.generate();
         assertEquals(85, dataSet.sampleSize());
         assertEquals(2, dataSet.classCount());
         assertEquals(66, dataSet.attributeCount());
