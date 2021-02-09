@@ -94,7 +94,6 @@ public class FeaturedShallowParseInstanceGenerator extends ShallowParseInstanceG
         current.addAttribute(new DiscreteAttribute("NULL"));
         current.addAttribute(new DiscreteAttribute("NULL"));
         current.addAttribute(new DiscreteAttribute("NULL"));
-
         current.addAttribute(new DiscreteAttribute("NULL"));
     }
 }
