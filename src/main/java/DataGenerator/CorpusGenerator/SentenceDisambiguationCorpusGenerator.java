@@ -1,8 +1,8 @@
 package DataGenerator.CorpusGenerator;
 
 import AnnotatedSentence.*;
-import MorphologicalDisambiguation.DisambiguatedWord;
-import MorphologicalDisambiguation.DisambiguationCorpus;
+import Corpus.DisambiguatedWord;
+import Corpus.DisambiguationCorpus;
 
 import java.io.File;
 

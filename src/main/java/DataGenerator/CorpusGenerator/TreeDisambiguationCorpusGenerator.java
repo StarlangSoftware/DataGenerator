@@ -3,10 +3,11 @@ package DataGenerator.CorpusGenerator;
 import AnnotatedSentence.AnnotatedSentence;
 import AnnotatedSentence.ViewLayerType;
 import AnnotatedSentence.AnnotatedWord;
-import MorphologicalDisambiguation.DisambiguatedWord;
-import MorphologicalDisambiguation.DisambiguationCorpus;
 import AnnotatedTree.ParseTreeDrawable;
 import AnnotatedTree.TreeBankDrawable;
+import Corpus.DisambiguatedWord;
+import Corpus.DisambiguationCorpus;
+
 import java.io.File;
 
 public class TreeDisambiguationCorpusGenerator {

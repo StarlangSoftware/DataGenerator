@@ -1,6 +1,6 @@
 package DataGenerator.CorpusGenerator;
 
-import MorphologicalDisambiguation.DisambiguationCorpus;
+import Corpus.DisambiguationCorpus;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
