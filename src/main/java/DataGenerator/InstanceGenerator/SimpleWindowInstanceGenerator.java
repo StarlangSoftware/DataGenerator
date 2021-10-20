@@ -18,7 +18,7 @@ public abstract class SimpleWindowInstanceGenerator extends InstanceGenerator{
      * @param current Current classification instance to which attributes will be added.
      * @param sentence Input sentence.
      * @param wordIndex The index of the word in the sentence.
-     * @throws InstanceNotGenerated
+     * @throws InstanceNotGenerated If attributes can not be added, throws InstanceNotGenerated.
      */
     protected void addAttributes(Instance current, Sentence sentence, int wordIndex) throws InstanceNotGenerated {
         try{

@@ -13,7 +13,7 @@ public abstract class NerInstanceGenerator extends SimpleWindowInstanceGenerator
      * @param sentence Input sentence.
      * @param wordIndex The index of the word in the sentence.
      * @return Classification instance.
-     * @throws InstanceNotGenerated
+     * @throws InstanceNotGenerated If attributes can not be added, throws InstanceNotGenerated.
      */
     public Instance generateInstanceFromSentence(Sentence sentence, int wordIndex) throws InstanceNotGenerated {
         Instance current;

@@ -6,7 +6,7 @@
 
     <groupId>io.github.starlangsoftware</groupId>
     <artifactId>DataGenerator</artifactId>
-    <version>1.0.19</version>
+    <version>1.0.20</version>
     <packaging>jar</packaging>
 
     <name>NlpToolkit.DataGenerator</name>
@@ -50,7 +50,7 @@
         <dependency>
             <groupId>io.github.starlangsoftware</groupId>
             <artifactId>AnnotatedTree</artifactId>
-            <version>1.0.30</version>
+            <version>1.0.31</version>
         </dependency>
         <dependency>
             <groupId>io.github.starlangsoftware</groupId>
