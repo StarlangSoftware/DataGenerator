@@ -13,7 +13,7 @@ public class VectorizedShallowParseInstanceGenerator extends ShallowParseInstanc
     private WordFormat format;
 
     /**
-     * Constructor of VectorizedNerInstanceGenerator which takes input a {@link VectorizedDictionary}, a window size
+     * Constructor of VectorizedShallowParseInstanceGenerator which takes input a {@link VectorizedDictionary}, a window size
      * and a word format and sets corresponding attributes with these inputs.
      * @param dictionary Dictionary in the vector form. Each word is stored in vector form in this dictionary.
      * @param windowSize Number of previous (next) words to be considered in adding attributes.
