@@ -4,7 +4,7 @@ Data Generator
 Video Lectures
 ============
 
-[<img src=video1.jpg width="50%">](https://youtu.be/E9rE_eCffPE)
+[<img src=video1.jpg width="50%">](https://youtu.be/E9rE_eCffPE)[<img src=video2.jpg width="50%">](https://youtu.be/ISHmGWvHL7k)
 
 For Developers
 ============
