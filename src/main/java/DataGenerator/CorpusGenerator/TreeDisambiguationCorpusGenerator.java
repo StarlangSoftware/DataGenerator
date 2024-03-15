@@ -11,7 +11,7 @@ import Corpus.DisambiguationCorpus;
 import java.io.File;
 
 public class TreeDisambiguationCorpusGenerator {
-    private TreeBankDrawable treeBank;
+    private final TreeBankDrawable treeBank;
 
     /**
      * Constructor for the DisambiguationCorpusGenerator which takes input the data directory and the pattern for the

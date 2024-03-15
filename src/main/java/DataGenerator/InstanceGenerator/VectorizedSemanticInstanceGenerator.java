@@ -11,8 +11,8 @@ import MorphologicalAnalysis.FsmMorphologicalAnalyzer;
 import WordNet.*;
 
 public class VectorizedSemanticInstanceGenerator extends SemanticInstanceGenerator{
-    private VectorizedDictionary dictionary;
-    private WordFormat format;
+    private final VectorizedDictionary dictionary;
+    private final WordFormat format;
 
     /**
      * Constructor of VectorizedNerInstanceGenerator which takes input a {@link VectorizedDictionary}, a window size

@@ -11,8 +11,8 @@ import java.util.ArrayList;
 
 public abstract class SemanticInstanceGenerator extends SimpleWindowInstanceGenerator{
 
-    private FsmMorphologicalAnalyzer fsm;
-    private WordNet wordNet;
+    private final FsmMorphologicalAnalyzer fsm;
+    private final WordNet wordNet;
 
     /**
      * Constructor for the semantic instance generator. Takes morphological analyzer and wordnet as input to set the
@@ -40,11 +40,11 @@ public abstract class SemanticInstanceGenerator extends SimpleWindowInstanceGene
             ArrayList<SynSet> possibleSynSets = ((AnnotatedSentence) sentence).constructSynSets(wordNet, fsm, wordIndex);
             AnnotatedWord word = (AnnotatedWord) sentence.getWord(wordIndex);
             String classLabel = word.getSemantic();
-            if (classLabel == null || possibleSynSets.size() == 0){
+            if (classLabel == null || possibleSynSets.isEmpty()){
                 return null;
             }
             CompositeInstance current = new CompositeInstance(classLabel);
-            ArrayList<String> possibleClassLabels = new ArrayList<String>();
+            ArrayList<String> possibleClassLabels = new ArrayList<>();
             for (SynSet synSet : possibleSynSets) {
                 possibleClassLabels.add(synSet.getId());
             }

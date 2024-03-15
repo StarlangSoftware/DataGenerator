@@ -7,7 +7,7 @@ import Corpus.DisambiguationCorpus;
 import java.io.File;
 
 public class SentenceDisambiguationCorpusGenerator {
-    private AnnotatedCorpus annotatedCorpus;
+    private final AnnotatedCorpus annotatedCorpus;
 
     /**
      * Constructor for the SentenceDisambiguationCorpusGenerator which takes input the data directory and the pattern for the

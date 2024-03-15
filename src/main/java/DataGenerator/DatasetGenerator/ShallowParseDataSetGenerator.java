@@ -9,7 +9,7 @@ import AnnotatedTree.ParseTreeDrawable;
 import java.util.ArrayList;
 
 public class ShallowParseDataSetGenerator extends DataSetGenerator{
-    private ChunkType chunkType;
+    private final ChunkType chunkType;
 
     /**
      * Constructor for the ChunkingDataSetGenerator which takes input the data directory, the pattern for the training files
@@ -32,7 +32,7 @@ public class ShallowParseDataSetGenerator extends DataSetGenerator{
      * @return An array of instances.
      */
     protected ArrayList<Instance> generateInstanceListFromTree(ParseTreeDrawable parseTree){
-        ArrayList<Instance> instanceList = new ArrayList<Instance>();
+        ArrayList<Instance> instanceList = new ArrayList<>();
         if (!parseTree.layerAll(ViewLayerType.INFLECTIONAL_GROUP))
             return instanceList;
         if (!parseTree.isFullSentence())

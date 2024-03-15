@@ -9,8 +9,8 @@ import Dictionary.VectorizedDictionary;
 import Dictionary.VectorizedWord;
 
 public class VectorizedNerInstanceGenerator extends NerInstanceGenerator{
-    private VectorizedDictionary dictionary;
-    private WordFormat format;
+    private final VectorizedDictionary dictionary;
+    private final WordFormat format;
 
     /**
      * Constructor of VectorizedNerInstanceGenerator which takes input a {@link VectorizedDictionary}, a window size

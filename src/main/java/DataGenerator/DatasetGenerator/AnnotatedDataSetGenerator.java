@@ -10,7 +10,7 @@ import DataGenerator.InstanceGenerator.InstanceNotGenerated;
 import java.io.File;
 
 public class AnnotatedDataSetGenerator {
-    private AnnotatedCorpus corpus;
+    private final AnnotatedCorpus corpus;
     protected InstanceGenerator instanceGenerator;
 
     /**
@@ -49,8 +49,7 @@ public class AnnotatedDataSetGenerator {
                     if (generatedInstance != null){
                         dataSet.addInstance(generatedInstance);
                     }
-                } catch (InstanceNotGenerated e) {
-                    System.out.println(e.toString());
+                } catch (InstanceNotGenerated ignored) {
                 }
             }
         }

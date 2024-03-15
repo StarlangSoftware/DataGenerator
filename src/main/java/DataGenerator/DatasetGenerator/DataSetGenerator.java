@@ -11,7 +11,7 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class DataSetGenerator {
-    private TreeBankDrawable treeBank;
+    private final TreeBankDrawable treeBank;
     protected InstanceGenerator instanceGenerator;
 
     /**
@@ -46,8 +46,7 @@ public class DataSetGenerator {
                 if (generatedInstance != null){
                     instanceList.add(generatedInstance);
                 }
-            } catch (InstanceNotGenerated e) {
-                System.out.println(e.toString());
+            } catch (InstanceNotGenerated ignored) {
             }
         }
         return instanceList;

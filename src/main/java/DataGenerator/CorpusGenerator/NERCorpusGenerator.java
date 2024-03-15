@@ -9,7 +9,7 @@ import AnnotatedTree.TreeBankDrawable;
 import java.io.File;
 
 public class NERCorpusGenerator {
-    private TreeBankDrawable treeBank;
+    private final TreeBankDrawable treeBank;
 
     /**
      * Constructor for the NERCorpusGenerator which takes input the data directory and the pattern for the training files

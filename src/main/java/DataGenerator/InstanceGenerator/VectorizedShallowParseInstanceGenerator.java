@@ -9,8 +9,8 @@ import Dictionary.VectorizedDictionary;
 import Dictionary.VectorizedWord;
 
 public class VectorizedShallowParseInstanceGenerator extends ShallowParseInstanceGenerator {
-    private VectorizedDictionary dictionary;
-    private WordFormat format;
+    private final VectorizedDictionary dictionary;
+    private final WordFormat format;
 
     /**
      * Constructor of VectorizedShallowParseInstanceGenerator which takes input a {@link VectorizedDictionary}, a window size
