@@ -86,7 +86,7 @@ Use below line to generate jar file:
         <dependency>
             <groupId>io.github.starlangsoftware</groupId>
             <artifactId>DataGenerator</artifactId>
-            <version>1.0.4</version>
+            <version>1.0.46</version>
         </dependency>
 
 # Detailed Description
